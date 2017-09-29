@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block title %}Hello{% endblock %}
+
+    {% block header %}
+    <h1>Hello</h1>
+    {% endblock %}
+    {% block menu%}
+{# on utilise include pour charger le menu#}
+{% include('perso/menu.html.twig  ') %}
+{% endblock %}
+{% block content %}
+<h3>Bonjour {{ nom }}</h3>
+{% endblock %}
