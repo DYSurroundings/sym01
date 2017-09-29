@@ -22,6 +22,14 @@ class AccueilController extends Controller
     public function pg2Action(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('perso/index.html.twig');
+        return $this->render('perso/pg2.html.twig');
+    }
+    /**
+     * @Route("/page3", name="pg3")
+     */
+    public function pg3Action(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('perso/pg3.html.twig');
     }
 }

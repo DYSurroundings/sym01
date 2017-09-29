@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block title %}Page 2{% endblock %}
+
+    {% block header %}
+    <h1>Page 2</h1>
+    {% endblock %}
+    {% block menu%}
+{# on utilise include pour charger le menu#}
+{% include('perso/menu.html.twig  ') %}
+{% endblock %}
+{% block content %}
+    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, neque, numquam. Accusamus consectetur dolorem ipsam laboriosam magnam mollitia officia optio, porro reiciendis soluta tempora tempore tenetur totam unde veritatis voluptatibus.</p>
+    <hr/>
+{% endblock %}
