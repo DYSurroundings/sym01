@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block title %}Bienvenue sur l'accueil!{% endblock %}
+
+    {% block header %}
+    <h1>Accueil</h1>
+    {% endblock %}
+    {% block menu%}
+{# on utilise include pour charger le menu#}
+{% include('perso/menu.html.twig  ') %}
+{% endblock %}
+{% block content %}
+    <p>Notre page d'accueil</p>
+    <hr/>
+{% endblock %}
