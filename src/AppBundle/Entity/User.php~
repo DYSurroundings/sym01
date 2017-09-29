@@ -3,8 +3,6 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints\Date;
-use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
  * User
@@ -51,13 +49,6 @@ class User
      */
     private $dateInscription;
 
-
-    // création d'un constructeur pour mettre une date par défaut
-
-    public function __construct()
-    {
-        $this->dateInscription = new \DateTime();
-    }
 
     /**
      * Get id
@@ -165,3 +156,4 @@ class User
         return $this->dateInscription;
     }
 }
+

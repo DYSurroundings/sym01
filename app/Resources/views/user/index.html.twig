@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Users list</h1>
+    {% block menu %}
+        {# on utilise include pour charger le menu#}
+        {% include('perso/menu.html.twig  ') %}
+    {% endblock %}
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Login</th>
+                <th>Pwd</th>
+                <th>Email</th>
+                <th>Dateinscription</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td><a href="{{ path('utilisateur_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
+                <td>{{ user.login }}</td>
+                <td>{{ user.pwd }}</td>
+                <td>{{ user.email }}</td>
+                <td>{% if user.dateInscription %}{{ user.dateInscription|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('utilisateur_show', { 'id': user.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('utilisateur_edit', { 'id': user.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('utilisateur_new') }}">Create a new user</a>
+        </li>
+    </ul>
+{% endblock %}
