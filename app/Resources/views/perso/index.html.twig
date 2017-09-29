@@ -9,6 +9,10 @@
 {% include('perso/menu.html.twig  ') %}
 {% endblock %}
 {% block content %}
-    <p>Notre page d'accueil</p>
+    <h3>Notre page d'accueil</h3>
+    <h4>Liste des utilisateurs</h4>
+    {% for u in users %}
+{{ u.id }} - {{ u.login }}<hr/>
+{% endfor %}
     <hr/>
 {% endblock %}
